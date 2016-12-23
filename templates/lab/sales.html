@@ -1,0 +1,27 @@
+{% extends 'lab/base.html' %}
+{% load staticfiles %}
+{% block title %}Выгодные предложения{% endblock %}
+
+{% block header %}Выгодные предложения{% endblock %}
+
+{% block body %}
+<style type="text/css">
+body {
+    background: url({% static 'lab/images/sales.png' %}) 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover; /* Масштабируем фон */
+   }
+  </style>
+
+<ul>
+    {% for model in sales %}
+        <li>
+            <p class="sal">{{ model.name }}</p>
+            <p>Срок проведения: {{ model.date }}</p>
+            <p>Комментарий:{{ model.text }}</p>
+{#        <img src="{% static '/lab/images/' %}{{ model.id }}.png" class="img" >#}
+        </li>
+    {% endfor %}
+</ul>
+<input type="button" value="Назад" onclick="history.back()">
+{% endblock %}
+

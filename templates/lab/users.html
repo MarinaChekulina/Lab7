@@ -1,0 +1,27 @@
+{% extends 'lab/base.html' %}
+{% load staticfiles %}
+{% block title %}Пользователи{% endblock %}
+
+{% block header %}Пользователи{% endblock %}
+
+{% block body %}
+<style type="text/css">
+body {
+    background: url({% static 'lab/images/sales.png' %}) 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover; /* Масштабируем фон */
+   }
+  </style>
+
+<ul>
+    {% for model in users %}
+        <li>
+            <p class="sal">{{ model.first_name }}{{" "}}{{ model.last_name }}</p>
+{#            <p>Фамилия: {{ model.last_name }}</p>#}
+            <p>Возраст: {{ model.age }}</p>
+            <p>Контактный телефон: {{ model.phone }}</p>
+            <p>Электронная почта: {{ model.email }}</p>
+        </li>
+    {% endfor %}
+</ul>
+<input type="button" value="Назад" onclick="history.back()">
+{% endblock %}

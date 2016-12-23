@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+{% block body %}
+
+ <ul>
+    <li>
+            <p class="adr">{{ adr.name }}</p>
+            <p>Адрес:{{ adr.adr }}</p>
+            <p>Время работы:{{ adr.time }}</p>
+            <p>Телефон:{{ adr.phone }}</p>
+            Схема проезда:<img src="{{ MEDIA_URL }}{{ adr.image_adr.url }}" style="width: 450px">
+{#            <p>Схема проезда:<img src="{% static '/lab/images/' %}{{ adr.id }}.png" class="img" ></p>#}
+    </li>
+ </ul>
+
+{% endblock %}

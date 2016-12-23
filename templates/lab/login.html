@@ -1,0 +1,10 @@
+{% extends 'lab/base.html' %}
+
+{% block title %}Успешный вход!{% endblock %}
+
+
+{% block header %}<h2>Вы успешно вошли в систему,{{ user }}!</h2>{% endblock %}
+
+{% block body %}
+    <button type="button" class="btn-default"><a href="{% url 'logout' %}">Выйти</a></button>
+{% endblock %}

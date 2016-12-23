@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<div>
+<li>
+{#    <div class="section">#}
+
+    <p class="rows">Модель: {{ car.name }}</p>
+
+{#    <img src="{% static '/lab/images/' %}{{ car.image_car.url }}.png" class="img" >#}
+{#    <img src="{% static '/lab/images/' %}{{ car.image_car.url }}" class="img" >#}
+    <img src="{{ MEDIA_URL }}{{ car.image_car.url }}" style="width: 450px">
+    <div class="card-block">
+        <p>Уникальный номер автомобиля:{{ car.id }}</p>
+        <p>Стоимость: от {{ car.price }} {{ "рублей" }}</p>
+        <p>Страна-производитель:{{ car.country }}</p>
+        <p>Описание:{{ car.description }}</p>
+        <p>Габариты атомобиля (Д*Ш*В):{{ car.length }}</p>
+        <p>Максимальная скорость:{{ car.max_speed }}</p>
+    </div>
+{#    </div>#}
+
+</li>
+
+</div>
+

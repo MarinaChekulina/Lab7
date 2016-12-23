@@ -1,0 +1,10 @@
+{% extends 'lab/base.html' %}
+
+{% block title %}Ошибка!{% endblock %}
+
+{% block header %}<h2>Вы не вошли в систему!</h2>{% endblock %}
+
+{% block body %}
+    <button type="button" class="btn-default"><a href="{% url 'registration' %}">Регистрация</a></button>
+    <button type="button" class="btn-default"><a href="{% url 'authorization' %}">Авторизация</a></button>
+{% endblock %}

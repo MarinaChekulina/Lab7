@@ -1,0 +1,31 @@
+{% extends 'lab/base.html' %}
+{% load staticfiles %}
+{% block title %}Официальные дилеры{% endblock %}
+
+{% block header %}Официальные дилеры{% endblock %}
+
+{% block body %}
+{#    <style type="text/css">#}
+{#   div {#}
+{#    background:  lightyellow;#}
+{#   }#}
+{#  </style>#}
+
+     <style type="text/css">
+body {
+{#    background: url({% static 'lab/images/engine.png' %}) lightgray; /* Добавляем фон */#}
+    background:lightgray;
+    background-position: right bottom; /* Положение фона */
+    background-repeat: repeat-y; /* Повторяем фон по горизонтали */
+   }
+    </style>
+    <ul>
+    {% for adr in address %}
+
+        {% include 'lab/address_item.html' %}
+
+    {% endfor %}
+    </ul>
+
+    <input type="button" value="Назад" onclick="history.back()">
+{% endblock %}

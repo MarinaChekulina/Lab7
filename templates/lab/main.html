@@ -1,0 +1,66 @@
+{% extends 'lab/base.html' %}
+{% block title %} Главная страница {% endblock %}
+{% block content %}
+{#     <br>#}
+{#            <ul>#}
+{#                <li>#}
+{#                    <a href="{% url 'model_row' %}" class="rows">#}
+{#                             Модельный ряд#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="{% url 'sales' %}" class="rows">#}
+{#                             Выгодные предложения#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="{% url 'address' %}" class="rows">#}
+{#                            Официальные дилеры#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="{% url 'users' %}" class="rows">#}
+{#                            Пользователи#}
+{#                    </a>#}
+{#                </li>#}
+{#            </ul>#}
+{#    </br>#}
+       <nav><a href="{% url 'model_row' %}">Модельный ряд</a> | <a href="{% url 'sales' %}"> Акции</a> |
+       <a href="{% url 'address' %}">Дилеры</a> | <a href="{% url 'users' %}">Пользователи</a></nav>
+
+                <h3>
+                    <a href="{% url 'model_row' %}">
+                             Модельный ряд
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{% url 'sales' %}">
+                             Выгодные предложения
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{% url 'address' %}">
+                            Официальные дилеры
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{% url 'users' %}">
+                            Пользователи
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{% url 'registration' %}">
+                        Регистрация
+                    </a>
+                </h3>
+                <h3>
+                    <a href="{% url 'authorization' %}">
+                        Авторизация
+                    </a>
+                </h3>
+
+
+{% endblock %}
+
+
+
